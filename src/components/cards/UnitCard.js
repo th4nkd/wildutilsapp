@@ -14,22 +14,22 @@ const UnitCard = ({ card }) => {
         <p className="text-lg font-semibold text-center bg-accent1">{card.name}</p>
       </div>
       <div className="text-center pb-2 pl-2 pr-2 pt-1">
-        <p className="text-textSecondary font-semibold mb-1">Market Price</p>
+        <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">Market Price</p>
         <div className="bg-commonColor rounded-md pl-3 m-0 mb-0.5 flex justify-between items-center">
-          <span className="text-white font-semibold">Common</span>
-          <span className="text-white font-semibold">0.9
+          <span className="text-white font-semibold text-sm sm:text-base md:text-base lg:text-base">Common</span>
+          <span className="text-white font-semibold text-sm sm:text-base md:text-base lg:text-base">0.9
           <FontAwesomeIcon icon={faExternalLink} className="text-white cursor-pointer ml-2 pr-1" onClick={() => { /* Adicione a lógica de redirecionamento aqui */ }} />
           </span>
         </div>
         <div className="bg-uncommonColor rounded-md pl-3 m-0 mb-0.5 flex justify-between items-center">
-          <span className="text-white font-semibold">Uncommon</span>
-          <span className="text-white font-semibold">0.9
+          <span className="text-white font-semibold text-sm sm:text-base md:text-base lg:text-base">Uncommon</span>
+          <span className="text-white font-semibold text-sm sm:text-base md:text-base lg:text-base">0.9
           <FontAwesomeIcon icon={faExternalLink} className="text-white cursor-pointer ml-2 pr-1" onClick={() => { /* Adicione a lógica de redirecionamento aqui */ }} />
           </span>
         </div>
         <div className="bg-rareColor rounded-md pl-3 m-0 mb-0.5 flex justify-between items-center">
-          <span className="text-white font-semibold">Rare</span>
-          <span className="text-white font-semibold">0.9
+          <span className="text-white font-semibold text-sm sm:text-base md:text-base lg:text-base">Rare</span>
+          <span className="text-white font-semibold text-sm sm:text-base md:text-base lg:text-base">0.9
           <FontAwesomeIcon icon={faExternalLink} className="text-white cursor-pointer ml-2 pr-1" onClick={() => { /* Adicione a lógica de redirecionamento aqui */ }} />
           </span>
         </div>
