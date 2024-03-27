@@ -2,9 +2,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 import PriceViewer from '../extra/PriceViewer';
 
-const RONIN_MARKETPLACE_URL = 'https://marketplace.skymavis.com/collections/0xa1ce53b661be73bf9a5edd3f0087484f0e3e7363';
+const RONIN_MARKETPLACE_URL = 'https://marketplace.skymavis.com/collections/0x0328b534d094b097020b4538230f998027a54db0';
 
-const LordCard = ({ unit, marketData, walletData }) => {
+const PackCard = ({ unit, marketData, walletData }) => {
     const hasMarketData = marketData && Object.keys(marketData).length > 0;
     const hasWalletData = walletData && Object.keys(walletData).length > 0;
 
@@ -28,7 +28,7 @@ const LordCard = ({ unit, marketData, walletData }) => {
     }
 
     return (
-    <div key={unit.id} className="bg-secondary rounded-lg shadow-md overflow-hidden m-2 border-2 border-b-0 border-accent1 rounded-t-lg relative">
+    <div key={unit.id} className="bg-secondary rounded-lg shadow-md overflow-hidden m-2 border-2 border-b-0 border-accent1 rounded-t-lg relative pt-5">
       <img
         src={unit.img}
         className="w-full h-30 object-cover mb-4 rounded-t-lg"
@@ -44,25 +44,25 @@ const LordCard = ({ unit, marketData, walletData }) => {
           </div>
           <div className="text-center mt-2">
             Open in Mavis 
-          <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-2 pr-1" title="View in Mavis Market" onClick={() => { window.open(RONIN_MARKETPLACE_URL + '?rank=' + unit.id.toLowerCase(), '_blank'); }} />
+          <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-2 pr-1" title="View in Mavis Market" onClick={() => { window.open(RONIN_MARKETPLACE_URL + '/' + unit.n, '_blank'); }} />
           </div>
         
       </div>
       {hasWalletData && (
           <div className="text-center pb-2 pl-2 pr-2 pt-1">
-          <hr className="border-1 border-accent1 mt-1 mb-2" />
-          <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">In Wallet</p>
-          <span className={`font-semibold text-sm sm:text-sm md:text-lg lg:text-lg text-right ${amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{amount === 0 ? 'None' : amount + ' x'}</span>
-          <hr className="border-1 border-accent1 mt-3" />
-        <div className="rounded-md m-0 mb-0.5 mt-1 flex justify-between items-center">
-        <p className={`font-semibold ml-2 text-sm sm:text-base md:text-lg lg:text-lg text-left ${total == 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>Total: </p>
+            <hr className="border-1 border-accent1 mt-1 mb-2" />
+            <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">In Wallet</p>
+            <span className={`font-semibold text-sm sm:text-sm md:text-lg lg:text-lg text-right ${amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{amount === 0 ? 'None' : amount + ' x'}</span>
+            <hr className="border-1 border-accent1 mt-3" />
+          <div className="rounded-md m-0 mb-0.5 mt-1 flex justify-between items-center">
+          <p className={`font-semibold ml-2 text-sm sm:text-base md:text-lg lg:text-lg text-left ${total == 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>Total: </p>
           <PriceViewer price={total} size={'lg'} color={total == 0 ? 'textSecondary' : 'white'}/>
-        </div>
-        </div>
+          </div>
+          </div>
         )}
         <span class="bg-mysticColor border-mysticColor border-0 opacity-0"></span>
     </div>
     );
   }
   
-  export default LordCard;
+  export default PackCard;

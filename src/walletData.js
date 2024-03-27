@@ -167,7 +167,7 @@ export const wData = {
             "amount": 1
         }
     ],
-    "packs": [],
+    "packs": [ { unit: 'standard', amount: '2' }, { unit: 'founder', amount: '1' } ],
     "unitstotal": {
         "total_common": 42,
         "total_uncommon": 64,

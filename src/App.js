@@ -1,8 +1,10 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
-import { GetWalletData, GetMarketData } from './apiService';
+import React, { useState, useEffect, useContext } from 'react';
+import { GetWalletData, GetMarketData, GetRONPrice } from './apiService';
 import WildCollections from './components/WildCollections';
 import LoadingScreen from './components/LoadingScreen';
+import Menu from './components/Menu';
+import ToggleContext from './components/extra/ToggleContext';
 
 // test
 import { mData } from './marketData';
@@ -10,6 +12,7 @@ import { wData } from './walletData';
 const UseTestData = true;
 
 function App() {
+  const { setPriceRon } = useContext(ToggleContext); 
   const [isLoading, setIsLoading] = useState(true);
   const [walletData, setWalletData] = useState([]);
   const [marketData, setMarketData] = useState([]);
@@ -28,13 +31,30 @@ function App() {
           const marketDataArray = JSON.parse(fMarketData.body);
           setMarketData(marketDataArray);
         }
-        
+
         setIsLoading(false);
       } catch (error) {
-        console.error('Erro ao carregar unidades:', error.message);
+        console.error('Erro loading API data:', error.message);
         setIsLoading(false);
       }
     };
+
+    const fetchCurrencies = async () => {
+      try {
+        const ronPriceData = await GetRONPrice();
+
+        if (typeof ronPriceData !== 'undefined')
+        {
+          const ronPrice = ronPriceData.data[0].price_usd;
+          setPriceRon(ronPrice);
+        }
+
+      } catch (error) {
+        console.error('Erro loading RON price:', error.message);
+      }
+    };
+
+    fetchCurrencies();
 
     if (!UseTestData) {
       fetchData();
@@ -46,14 +66,17 @@ function App() {
   }, []);
 
   return (
-    <div className="App bg-primary text-textPrimary">
-      {isLoading ? (
-        <LoadingScreen />
-      ) : (
-        <div>
-          <WildCollections marketData={marketData} walletData={walletData} />
-        </div>
-      )}
+    <div>
+      <Menu />
+      <div className="App bg-primary text-textPrimary">
+        {isLoading ? (
+          <LoadingScreen />
+        ) : (
+          <div>
+            <WildCollections marketData={marketData} walletData={walletData} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import UnitsCollection from '../components/collections/UnitsCollection';
 import SkinsCollection from '../components/collections/SkinsCollection';
 import LordsCollection from '../components/collections/LordsCollection';
+import PacksCollection from '../components/collections/PacksCollection';
+import Head from '../components/Head';
 
 const WildCollections = ({ marketData, walletData }) => {
 
@@ -24,13 +26,15 @@ const WildCollections = ({ marketData, walletData }) => {
     marketLordsData = filterByType(marketData, 'lord');
     marketPacksData = filterByType(marketData, 'pack');
   }
-  //<UnitsCollection marketData={marketUnitsData} walletData={walletData.units} />
-  //<SkinsCollection marketData={marketSkinsData} walletData={walletData.skins} />
   return (
     <div>
         {walletData && walletData.units ? (
           <div>
-            <LordsCollection marketData={marketLordsData} walletData={walletData.lords} />
+              <Head />
+              <UnitsCollection marketData={marketUnitsData} walletData={walletData.units} />
+              <SkinsCollection marketData={marketSkinsData} walletData={walletData.skins} />
+              <LordsCollection marketData={marketLordsData} walletData={walletData.lords} />
+              <PacksCollection marketData={marketPacksData} walletData={walletData.packs} />
           </div>
         ) : (
           <div>

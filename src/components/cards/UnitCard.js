@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
+import PriceViewer from '../extra/PriceViewer';
+import PriceLinkViewer from '../extra/PriceLinkViewer';
 
 const RONIN_MARKETPLACE_URL = 'https://marketplace.skymavis.com/collections/0xa038c593115f6fcd673f6833e15462b475994879';
 
@@ -64,20 +66,20 @@ const UnitCard = ({ unit, marketData, walletData }) => {
         <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">Market Price</p>
         <div className="bg-commonColor rounded-md pl-1 m-0 mb-0.5 flex justify-between items-center">
           <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">Common</span>
-          <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">{c_price}
-          <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-1 pr-1" title="View in Mavis Market" onClick={() => { window.open(RONIN_MARKETPLACE_URL + '?rarity=common&type=' + unit.name.toLowerCase(), '_blank'); }} />
+          <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">
+            <PriceLinkViewer price={c_price} link={RONIN_MARKETPLACE_URL + '?rarity=common&type=' + unit.name.toLowerCase()} />
           </span>
         </div>
         <div className="bg-uncommonColor rounded-md pl-1 m-0 mb-0.5 flex justify-between items-center">
           <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">Uncommon</span>
-          <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">{u_price}
-          <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-1 pr-1" title="View in Mavis Market" onClick={() => { window.open(RONIN_MARKETPLACE_URL + '?rarity=uncommon&type=' + unit.name.toLowerCase(), '_blank'); }} />
+          <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">
+            <PriceLinkViewer price={u_price} link={RONIN_MARKETPLACE_URL + '?rarity=uncommon&type=' + unit.name.toLowerCase()} />
           </span>
         </div>
         <div className="bg-rareColor rounded-md pl-1 m-0 mb-0.5 flex justify-between items-center">
           <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">Rare</span>
-          <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">{r_price}
-          <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-1 pr-1" title="View in Mavis Market" onClick={() => { window.open(RONIN_MARKETPLACE_URL + '?rarity=rare&type=' + unit.name.toLowerCase(), '_blank'); }} />
+          <span className="text-white font-semibold text-sm sm:text-sm md:text-sm lg:text-base">
+            <PriceLinkViewer price={r_price} link={RONIN_MARKETPLACE_URL + '?rarity=rare&type=' + unit.name.toLowerCase()} />
           </span>
         </div>
       </div>
@@ -85,22 +87,22 @@ const UnitCard = ({ unit, marketData, walletData }) => {
           <div className="text-center pb-2 pl-2 pr-2 pt-1">
             <hr className="border-1 border-accent1 mt-1 mb-2" />
             <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">In Wallet</p>
-            <div className="border-2 border-commonColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{c_amount === 0 ? '' : c_amount + ' x'}</span>
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{c_amount === 0 ? 'None' : c_total}</span>
+            <div className="border-0 border-commonColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-commonColor'}`}>{c_amount === 0 ? 'Common' : c_amount + ' x Common '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-commonColor'}`}>{c_amount === 0 ? 'None' : c_total}</span>
             </div>
-            <div className="border-2 border-uncommonColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{u_amount === 0 ? '' : u_amount + ' x'}</span>
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{u_amount === 0 ? 'None' : u_total}</span>
+            <div className="border-0 border-uncommonColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-uncommonColor'}`}>{u_amount === 0 ? 'Uncommon' : u_amount + ' x Uncommon '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-uncommonColor'}`}>{u_amount === 0 ? 'None' : u_total}</span>
             </div>
-            <div className="border-2 border-rareColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{r_amount === 0 ? '' : r_amount + ' x'}</span>
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>{r_amount === 0 ? 'None' : r_total}</span>
+            <div className="border-0 border-rareColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-rareColor'}`}>{r_amount === 0 ? 'Rare' : r_amount + ' x Rare '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-rareColor'}`}>{r_amount === 0 ? 'None' : r_total}</span>
             </div>
             <hr className="border-1 border-accent1 mt-3" />
           <div className="rounded-md m-0 mb-0.5 mt-1 flex justify-between items-center">
-            <p className="text-textPrimary font-semibold mb-1 ml-2 text-sm sm:text-base md:text-base lg:text-base text-left">Total: </p>
-            <p className="text-textPrimary font-semibold mb-1 mr-2 text-sm sm:text-base md:text-base lg:text-base text-right">{total}</p>
+            <p className={`font-semibold ml-2 text-sm sm:text-base md:text-lg lg:text-lg text-left ${total == 0 ? 'text-textSecondary' : 'text-textPrimary'}`}>Total: </p>
+            <PriceViewer price={total} size={'lg'} color={total == 0 ? 'textSecondary' : 'white'}/>
           </div>
           </div>
         )}

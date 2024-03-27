@@ -324,4 +324,13 @@ async function GetMarketData() {
     }
 }
 
-export { GetWalletData, GetMarketData };
+async function GetRONPrice() {
+    try {
+        const response = await axios.get('https://api.coinlore.net/api/ticker/?id=64703', {});
+        return response;
+    } catch (error) {
+        return "[]";
+    }
+}
+
+export { GetWalletData, GetMarketData, GetRONPrice };
