@@ -165,7 +165,15 @@ export const wData = {
         {
             "unit": "epic",
             "amount": 1
-        }
+        },
+        {
+            "unit": "legendary",
+            "amount": 1
+        },
+        {
+            "unit": "mystic",
+            "amount": 1
+        },
     ],
     "packs": [ { unit: 'standard', amount: '2' }, { unit: 'founder', amount: '1' } ],
     "unitstotal": {
