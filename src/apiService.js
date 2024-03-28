@@ -68,19 +68,27 @@ async function GetWalletUnits(wallet) {
             let rarity;
 
             if (item.rawMetadata) {
-                unit = item.rawMetadata.properties.type.toLowerCase();
-                rarity = item.rawMetadata.properties.rarity;
+                try {
+                    unit = item.rawMetadata.properties.type.toLowerCase();
+                    rarity = item.rawMetadata.properties.rarity;
+                } catch (e) {
+                    console.error("Error trying to read nft data: " + e.message); 
+                }
             } else if (item.tokenURI && item.tokenURI != '') {
                 // try to fetch direct in metadata URI
-                const response = await fetch(item.tokenURI);
-                if (response.status == 200)
-                {
-                    const metadata = await response.json();
-                    if (metadata.properties)
+                try {
+                    const response = await fetch(item.tokenURI);
+                    if (response.status == 200)
                     {
-                        unit = metadata.properties.type.toLowerCase();
-                        rarity = metadata.properties.rarity;
+                        const metadata = await response.json();
+                        if (metadata.properties)
+                        {
+                            unit = metadata.properties.type.toLowerCase();
+                            rarity = metadata.properties.rarity;
+                        }
                     }
+                } catch (e) {
+                    console.error("Error trying to fetch nft data: " + e.message);
                 }
             }
 
@@ -114,19 +122,27 @@ async function GetWalletSkins(wallet) {
             let rarity;
 
             if (item.rawMetadata) {
-                unit = item.rawMetadata.properties.unit.toLowerCase();
-                rarity = item.rawMetadata.properties.rarity;
+                try {
+                    unit = item.rawMetadata.properties.unit.toLowerCase();
+                    rarity = item.rawMetadata.properties.rarity;
+                } catch (e) {
+                    console.error("Error trying to read nft data: " + e.message); 
+                }
             } else if (item.tokenURI && item.tokenURI != '') {
                 // try to fetch direct in metadata URI
-                const response = await fetch(item.tokenURI);
-                if (response.status == 200)
-                {
-                    const metadata = await response.json();
-                    if (metadata.properties)
+                try {
+                    const response = await fetch(item.tokenURI);
+                    if (response.status == 200)
                     {
-                        unit = metadata.properties.unit.toLowerCase();
-                        rarity = metadata.properties.rarity;
+                        const metadata = await response.json();
+                        if (metadata.properties)
+                        {
+                            unit = metadata.properties.unit.toLowerCase();
+                            rarity = metadata.properties.rarity;
+                        }
                     }
+                } catch (e) {
+                    console.error("Error trying to fetch nft data: " + e.message);
                 }
             }
 
