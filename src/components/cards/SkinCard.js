@@ -69,11 +69,11 @@ const SkinCard = ({ unit, marketData, walletData }) => {
             <hr className="border-1 border-accent1 mt-1 mb-2" />
             <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">In Wallet</p>
             <div className="border-0 border-epicColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${e_amount === 0 ? 'text-textSecondary' : 'text-epicColor'}`}>{e_amount === 0 ? 'Epic' : e_amount + ' x Epic '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${e_amount === 0 ? 'text-textSecondary' : 'text-epicColor'}`}>{e_amount === 0 ? 'Epic' : e_amount + 'x Epic '}</span>
               <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${e_amount === 0 ? 'text-textSecondary' : 'text-epicColor'}`}>{e_amount === 0 ? 'None' : e_total}</span>
             </div>
             <div className="border-0 border-legendaryColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${l_amount === 0 ? 'text-textSecondary' : 'text-legendaryColor'}`}>{l_amount === 0 ? 'Legendary' : l_amount + ' x Legendary '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${l_amount === 0 ? 'text-textSecondary' : 'text-legendaryColor'}`}>{l_amount === 0 ? 'Legendary' : l_amount + 'x Legendary '}</span>
               <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${l_amount === 0 ? 'text-textSecondary' : 'text-legendaryColor'}`}>{l_amount === 0 ? 'None' : l_total}</span>
             </div>
             <hr className="border-1 border-accent1 mt-3" />

@@ -88,15 +88,15 @@ const UnitCard = ({ unit, marketData, walletData }) => {
             <hr className="border-1 border-accent1 mt-1 mb-2" />
             <p className="text-textSecondary font-semibold mb-1 text-sm sm:text-base md:text-base lg:text-base">In Wallet</p>
             <div className="border-0 border-commonColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-commonColor'}`}>{c_amount === 0 ? 'Common' : c_amount + ' x Common '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-commonColor'}`}>{c_amount === 0 ? 'Common' : c_amount + 'x Common '}</span>
               <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${c_amount === 0 ? 'text-textSecondary' : 'text-commonColor'}`}>{c_amount === 0 ? 'None' :  <PriceViewer price={c_total} size={'sm'} color={total == 0 ? 'textSecondary' : 'text-commonColor'}/>}</span>
             </div>
             <div className="border-0 border-uncommonColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-uncommonColor'}`}>{u_amount === 0 ? 'Uncommon' : u_amount + ' x Uncommon '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-uncommonColor'}`}>{u_amount === 0 ? 'Uncommon' : u_amount + 'x Uncommon '}</span>
               <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${u_amount === 0 ? 'text-textSecondary' : 'text-uncommonColor'}`}>{u_amount === 0 ? 'None' : <PriceViewer price={u_total} size={'sm'} color={total == 0 ? 'textSecondary' : 'text-uncommonColor'}/>}</span>
             </div>
             <div className="border-0 border-rareColor rounded-t-lg rounded-md pl-2 pr-2 m-0 mb-0.5 flex justify-between items-center">
-              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-rareColor'}`}>{r_amount === 0 ? 'Rare' : r_amount + ' x Rare '}</span>
+              <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-rareColor'}`}>{r_amount === 0 ? 'Rare' : r_amount + 'x Rare '}</span>
               <span className={`font-semibold text-sm sm:text-sm md:text-sm lg:text-base text-right ${r_amount === 0 ? 'text-textSecondary' : 'text-rareColor'}`}>{r_amount === 0 ? 'None' : <PriceViewer price={r_total} size={'sm'} color={total == 0 ? 'textSecondary' : 'text-rareColor'}/>}</span>
             </div>
             <hr className="border-1 border-accent1 mt-3" />

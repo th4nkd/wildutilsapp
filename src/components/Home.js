@@ -51,7 +51,7 @@ const Home = () => {
           </div>
 
           <div className="p-3 mt-1 text-white text-sm text-center font-semibold">
-          All data presented are collected directly from <br />the Mavis Marketplace and Ronin Services 
+          All data presented are collected directly from the <br />Mavis Marketplace and Ronin Services 
           </div>
         </div>
       </div>
