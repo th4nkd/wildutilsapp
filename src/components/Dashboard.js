@@ -96,7 +96,6 @@ const Dashboard = () => {
             await fetchCurrencies();
             await fetchMarketData();
 
-            console.log('address: ' + address);
             if (address !== null && address !== undefined && address !== '') {
                 const resp = await fetchWalletData(address);
                 setDashboardOn(resp);

@@ -27,7 +27,7 @@ const HeadSearch = () => {
     const regex = /^0x[a-fA-F0-9]{40}$/;
 
     setInvalidAddress('');
-    console.log(addrs);
+    
     if (!regex.test(addrs) && addrs !== null && addrs !== undefined && addrs !== '')
         setInvalidAddress(addrs);
   }, []);
