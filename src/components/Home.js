@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Background from '../assets/images/logo.jpeg';
+import Background from '../assets/images/logo2.png';
 import Logo from '../assets/images/logo.png';
 import Menu from './Menu';
 import Footer from './Footer';
@@ -18,13 +18,14 @@ const Home = () => {
       <Menu />
 
       <div
-        className="flex-1 flex justify-center items-center bg-black bg-opacity-80"
-        style={{
-          backgroundImage: `url(${Background})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed',
-        }}
+  className="flex-1 flex justify-center items-center bg-black bg-opacity-80"
+  style={{
+    backgroundImage: `url(${Background})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed',
+    backgroundRepeat: 'no-repeat',
+  }}
       >
         <div className="z-10 text-white text-center bg-primary bg-opacity-70 rounded-md pt-10 pb-4 pl-4 pr-4 max-w-screen-sm w-full">
           <img

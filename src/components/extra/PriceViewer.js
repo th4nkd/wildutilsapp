@@ -11,7 +11,7 @@ const PriceViewer = ({ price, size, color }) => {
 
   return (
     <div className={`text-${color} font-semibold text-sm sm:text-sm md:text-${size} lg:text-${size}`}>
-      {selectedOption === 'ron' ? price : price_ron } {selectedOption === 'ron' ? '' : '$'} {selectedOption === 'ron' && <RonIcon style={{ display: 'inline-block', marginLeft:-6, marginRight:-3 }} />}
+      {selectedOption === 'ron' ? price : price_ron }{selectedOption === 'ron' ? '' : '$'} {selectedOption === 'ron' && <RonIcon style={{ display: 'inline-block', marginLeft:-6, marginRight:-3 }} />}
     </div>
   );
 };
