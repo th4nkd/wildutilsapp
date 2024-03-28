@@ -27,7 +27,7 @@ const Home = () => {
     backgroundRepeat: 'no-repeat',
   }}
       >
-        <div className="z-10 text-white text-center rounded-md pt-10 pb-4 pl-4 pr-4 max-w-screen-sm w-full">
+        <div className="z-10 text-white text-center rounded-md pt-10 pb-4 pl-4 pr-4 max-w-screen-md w-full">
           <img
             src={Logo}
             className="max-w-48 mx-auto mb-4"
@@ -43,7 +43,7 @@ const Home = () => {
               onChange={(e) => setAddress(e.target.value)}
             />
             <button
-              className="py-3 px-8 bg-primary rounded-r-md text-white"
+              className="py-3 px-8 bg-orange-400 rounded-r-md text-white"
               onClick={handleSearch}
             >
               <FontAwesomeIcon icon={faSearch} />
@@ -51,7 +51,7 @@ const Home = () => {
           </div>
 
           <div className="p-3 mt-4 text-white text-sm text-center font-semibold">
-          All data presented are collected directly from the Mavis Marketplace and Ronin Services 
+          Data presented originates directly from Mavis Marketplace and Ronin Services
           </div>
         </div>
       </div>
