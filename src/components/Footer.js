@@ -9,7 +9,7 @@ const Footer = ({full}) => {
         <p className="text-center text-sm sm:text-sm md:text-sm lg:text-sm mb-2 pt-5">Made by Th4nkd. Liked it? Buy me a coffee ☕ and help me bring many more features. 😀</p>
         <div className="flex justify-center items-center">
           <p className="mr-2 text-sm sm:text-sm md:text-sm lg:text-sm">Ronin:</p>
-          <span className="font-bold text-sm sm:text-sm md:text-sm lg:text-sm underline">0x31bda1999a40ec043ea08f69c316511ca80eb6e9</span>
+          <span className="font-bold text-sm sm:text-sm md:text-sm lg:text-sm underline">0x3f2ec31d4faf5a09bb530bab15b5476bfd7c72ec</span>
         </div>
         <hr className="my-6 border-gray-400" /></div>}
 
