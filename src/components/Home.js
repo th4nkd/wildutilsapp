@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Background from '../assets/images/logo2.png';
+import Background from '../assets/images/bg.png';
 import Logo from '../assets/images/logo.png';
 import Menu from './Menu';
 import Footer from './Footer';
