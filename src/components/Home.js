@@ -27,7 +27,7 @@ const Home = () => {
     backgroundRepeat: 'no-repeat',
   }}
       >
-        <div className="z-10 text-white text-center bg-primary bg-opacity-70 rounded-md pt-10 pb-4 pl-4 pr-4 max-w-screen-sm w-full">
+        <div className="z-10 text-white text-center rounded-md pt-10 pb-4 pl-4 pr-4 max-w-screen-sm w-full">
           <img
             src={Logo}
             className="max-w-48 mx-auto mb-4"
@@ -50,8 +50,8 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="p-3 rounded-md mt-4 text-white text-sm text-center">
-            All prices presented are data collected directly from the Mavis Marketplace every hour.
+          <div className="p-3 mt-4 text-white text-sm text-center font-semibold">
+          All data presented are collected directly from the Mavis Marketplace and Ronin Services
           </div>
         </div>
       </div>
