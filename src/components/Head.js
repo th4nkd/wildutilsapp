@@ -56,23 +56,19 @@ const Head = ({ dashboardData }) => {
                   <hr className="border-1 border-accent1 mt-0 mb-1" />
                   <div className="grid grid-cols-4 gap-4 text-white mb-3">
                     <div className="text-commonColor font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.c_amount}</p>
-                      <p>Common</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.c_amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Common</span></p>
                       <p className="pt-2"><PriceTextViewer price={dashboardData.units.c_total.toFixed(2)} size={'lg'} color={'text-commonColor'} /></p>
                     </div>
                     <div className="text-uncommonColor font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.u_amount}</p>
-                      <p>Uncommon</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.u_amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Uncommon</span></p>  
                       <p className="pt-2"><PriceTextViewer price={dashboardData.units.u_total.toFixed(2)} size={'lg'} color={'text-uncommonColor'}/></p>
                     </div>
                     <div className="text-rareColor font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.r_amount}</p>
-                      <p>Rare</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.r_amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Rare</span></p>
                       <p className="pt-2"><PriceTextViewer price={dashboardData.units.r_total.toFixed(2)} size={'lg'} color={'text-rareColor'}/></p>
                     </div>
                     <div className="text-textPrimary font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.amount}</p>
-                      <p>Total</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.units.amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Total</span></p>
                       <p className="pt-2"><PriceTextViewer price={dashboardData.units.total.toFixed(2)} size={'lg'} color={'text-textPrimary'}/></p>
                     </div>
                   </div>
@@ -81,18 +77,15 @@ const Head = ({ dashboardData }) => {
                   <hr className="border-1 border-accent1 mt-0 mb-1" />
                   <div className="grid grid-cols-3 gap-3 text-white mb-3">
                     <div className="text-epicColor font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.skins.e_amount}</p>
-                      <p>Epic</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.skins.e_amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Epic</span></p>
                       <p className="pt-2"><PriceTextViewer price={dashboardData.skins.e_total.toFixed(2)} size={'lg'} color={'text-epicColor'}/></p>
                     </div>
                     <div className="text-legendaryColor font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.skins.l_amount}</p>
-                      <p>Legendary</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.skins.l_amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Legendary</span></p>
                       <p className="pt-2"><PriceTextViewer price={dashboardData.skins.l_total.toFixed(2)} size={'lg'} color={'text-legendaryColor'} /></p>
                     </div>
                     <div className="text-textPrimary font-semibold">
-                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.skins.amount}</p>
-                      <p>Total</p>
+                      <p className="text-sm sm:text-base md:text-lg lg:text-lg">{dashboardData.skins.amount} <span className="text-sm sm:text-base md:text-sm lg:text-shm">Total</span></p>
                       <p className="pt-2"><PriceTextViewer price={dashboardData.skins.total.toFixed(2)} size={'lg'} color={'text-textPrimary'} /></p>
                     </div>
                   </div>
