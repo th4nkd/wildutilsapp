@@ -11,8 +11,6 @@ const Head = ({ dashboardData }) => {
 
   if (ronPrice) price_ron = parseFloat(ronPrice.toString()).toFixed(2);
 
-console.log(dashboardData);
-
   return (
     <div className="w-80vw mx-auto mt-8">
       <div className="relative border-2 border-accent1 rounded-md">
@@ -109,6 +107,7 @@ console.log(dashboardData);
                       </p>
                     </div>
                   ))}
+                  {dashboardData.lords.total == 0 && <div><span className="font-semibold text-sm sm:text-sm md:text-lg lg:text-lg text-right text-textSecondary">None</span></div>}
                   </div>
                   
                   <h2 className="font-semibold text-textPrimary text-sm sm:text-base md:text-lg lg:text-lg pt-3">Packs</h2>
@@ -121,8 +120,13 @@ console.log(dashboardData);
                       </p>
                     </div>
                   ))}
+                  {dashboardData.packs.total == 0 && <div><span className="font-semibold text-sm sm:text-sm md:text-lg lg:text-lg text-right text-textSecondary">None</span></div>}
                   </div>
               </div>
+            </div>
+            <div className="text-right mt-4 mb-1">
+              <hr className="border-1 border-accent1 pt-3 mb-1" />
+              <span className="font-semibold text-sm sm:text-sm md:text-sm lg:text-sm text-right pr-1">The floor price is used to determine the value of each item.</span>
             </div>
         </div>
       </div>

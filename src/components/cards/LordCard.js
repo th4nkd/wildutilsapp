@@ -42,9 +42,10 @@ const LordCard = ({ unit, marketData, walletData }) => {
         
           <div className="text-white font-semibold text-sm sm:text-sm md:text-lg lg:text-lg"> <PriceViewer price={price} size={'lg'} color={'textPrimary'} />
           </div>
+
           <div className="text-center mt-2">
-            Open in Mavis 
-          <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-2 pr-1" title="View in Mavis Market" onClick={() => { window.open(RONIN_MARKETPLACE_URL + '?rank=' + unit.id.toLowerCase(), '_blank'); }} />
+            <a className="cursor-pointer  transition duration-300 hover:underline hover:text-white"  onClick={() => { window.open(RONIN_MARKETPLACE_URL + '?rank=' + unit.id.toLowerCase(), '_blank'); }}>  Open in Mavis 
+            <FontAwesomeIcon icon={faExternalLink} size="sm" className="text-white cursor-pointer ml-2 pr-1" title="View in Mavis Market" /></a>
           </div>
         
       </div>

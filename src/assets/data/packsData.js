@@ -14,13 +14,13 @@ export const PacksData = [
     {
         n:2,
         id:'standard',
-        name:'Standard Pack',
+        name:'Basic+ Pack',
         img:standardImg
     },
     {
         n:3,
         id:'basicplus',
-        name:'Basic+ Pack',
+        name:'Standard Pack',
         img:basicplusImg
     },
     {

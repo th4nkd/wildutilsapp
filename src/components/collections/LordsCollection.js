@@ -13,7 +13,7 @@ const LordsCollection = ({ marketData, walletData }) => {
           className="w-full h-20 object-cover border-2 border-b-0 border-accent1 rounded-t-lg"
         />
         <div className="absolute inset-x-0 top-0 text-center p-4 text-white font-semibold">
-          <p className="bg-gradient-to-b from-sfont1 to-sfont2 text-transparent bg-clip-text text-xl md:text-3xl lg:text-4xl text-right mr-20 font-bold " style={{ textShadow: '0 0 10px rgba(255, 229, 58, 0.5)', WebkitTextStroke: '0.5px #000000' }}>LORDS</p>
+          <p className="bg-gradient-to-b from-sfont1 to-sfont2 text-transparent bg-clip-text text-xl md:text-3xl lg:text-5xl text-center font-bold " style={{ textShadow: '0 0 10px rgba(255, 229, 58, 0.5)', WebkitTextStroke: '0.5px #000000' }}>LORDS</p>
         </div>
       </div>
       <div className='gap-1 p-6 border-2 border-accent1 rounded-b-lg'>
