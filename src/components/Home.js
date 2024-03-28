@@ -50,8 +50,8 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="p-3 mt-4 text-white text-sm text-center font-semibold">
-          Data presented originates directly from Mavis Marketplace and Ronin Services
+          <div className="p-3 mt-1 text-white text-sm text-center font-semibold">
+          All data presented are collected directly from <br />the Mavis Marketplace and Ronin Services 
           </div>
         </div>
       </div>
