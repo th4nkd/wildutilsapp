@@ -60,7 +60,7 @@ const HeadSearch = () => {
                     </div>
                     <div className="flex-1 pl-5">
                       <div className="flex justify-center mb-2">
-                        <h2 className="text-textPrimary font-semibold mb-0">Display Values In</h2>
+                        <h2 className="text-textPrimary font-semibold mb-0">DISPLAY VALUES IN</h2>
                       </div>
                       <div className="flex justify-center">
                         <ToggleComponent />

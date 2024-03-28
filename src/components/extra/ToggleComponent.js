@@ -7,7 +7,7 @@ const ToggleComponent = () => {
 
   return (
     <div className="flex items-center space-x-4">
-      <label className="inline-flex items-center">
+      <label className="inline-flex items-center pr-1">
         <input
           type="radio"
           value="ron"
@@ -23,7 +23,7 @@ const ToggleComponent = () => {
           /> RON
         </span>
       </label>
-      <label className="inline-flex items-center">
+      <label className="inline-flex items-center pl-1">
         <input
           type="radio"
           value="USD"
