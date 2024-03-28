@@ -28,7 +28,7 @@ const Menu = () => {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
           </svg>
         </button>
-        <div className={`absolute right-0 top-full md:relative md:flex ${menuOpen ? 'block' : 'hidden'}`} id="navbar-default">
+        <div className={`absolute right-0 top-full md:relative md:flex ${menuOpen ? 'block z-50' : 'hidden'}`} id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-secondary">
             <li>
               <Link to="/" className={`block font-semibold py-2 px-3 text-textSecondary rounded md:hover:text-textPrimary md:p-0 hover:text-white hover:bg-dark text-sm sm:text-base md:text-lg lg:text-lg ${location.pathname === '/' ? 'activeItem' : ''}`} onClick={toggleMenu}>Home</Link>

@@ -55,7 +55,7 @@ const Home = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer full={false} />
     </div>
   );
 };

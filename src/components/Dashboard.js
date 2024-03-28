@@ -148,7 +148,7 @@ const Dashboard = () => {
             </div>
           )}
         </div>
-        <Footer />
+        <Footer full={true} />
     </div>
   );
 };

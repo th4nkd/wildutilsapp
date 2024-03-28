@@ -1,21 +1,22 @@
 import React from 'react';
 
-const Footer = () => {
+const Footer = ({full}) => {
   return (
-    <footer className="bg-secondary text-white py-4 px-4 pt-8 border-t-4 border-accent1 ff">
+    <footer className="bg-secondary text-white py-4 px-4 pt-3 border-t-4 border-accent1 ff">
       <div className="max-w-screen-xl mx-auto">
-        <p className="text-center text-sm sm:text-sm md:text-sm lg:text-sm mb-2">Made by Th4nkd. Liked it? Buy me a coffee ☕ and help me bring many more features. 😀</p>
+
+        {full && <div>
+        <p className="text-center text-sm sm:text-sm md:text-sm lg:text-sm mb-2 pt-5">Made by Th4nkd. Liked it? Buy me a coffee ☕ and help me bring many more features. 😀</p>
         <div className="flex justify-center items-center">
           <p className="mr-2 text-sm sm:text-sm md:text-sm lg:text-sm">Ronin:</p>
           <span className="font-bold text-sm sm:text-sm md:text-sm lg:text-sm underline">0x31bda1999a40ec043ea08f69c316511ca80eb6e9</span>
         </div>
-        
-        <hr className="my-6 border-gray-400" />
+        <hr className="my-6 border-gray-400" /></div>}
+
         <div className="text-center text-sm sm:text-sm md:text-sm lg:text-sm">
-          <p>&copy; {new Date().getFullYear()} All rights reserved to Wild Forest. Images and content belong to their respective owners. </p>
+        <p className="mx-4">&copy; {new Date().getFullYear()} Wild Forest. Images and content belong to their owners.</p>
         </div>
       
-
       </div>
     </footer>
   );
